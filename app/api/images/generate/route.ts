@@ -1,4 +1,3 @@
-// app/api/images/generate/route.ts
 import OpenAI from "openai";
 
 export const runtime = "nodejs";
