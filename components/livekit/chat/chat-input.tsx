@@ -1,16 +1,21 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 interface ChatInputProps extends React.HTMLAttributes<HTMLFormElement> {
   onSend?: (message: string) => void;
   disabled?: boolean;
+  /**
+   * Use React's submit event type (NOT DOM SubmitEvent) to avoid TS mismatch.
+   */
+  onSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export function ChatInput({
   onSend,
   className,
   disabled,
+  onSubmit,
   ...props
 }: ChatInputProps) {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -18,7 +23,7 @@ export function ChatInput({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    props.onSubmit?.(e);
+    onSubmit?.(e);
     onSend?.(message);
     setMessage("");
   };
@@ -27,7 +32,6 @@ export function ChatInput({
 
   useEffect(() => {
     if (disabled) return;
-    // when not disabled refocus on input
     inputRef.current?.focus();
   }, [disabled]);
 
@@ -35,10 +39,7 @@ export function ChatInput({
     <form
       {...props}
       onSubmit={handleSubmit}
-      className={cn(
-        "flex items-center gap-2 rounded-md pl-1 text-sm",
-        className,
-      )}
+      className={cn("flex items-center gap-2 rounded-md pl-1 text-sm", className)}
     >
       <input
         autoFocus
@@ -50,6 +51,7 @@ export function ChatInput({
         onChange={(e) => setMessage(e.target.value)}
         className="flex-1 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
       />
+
       <Button
         size="sm"
         type="submit"
