@@ -14,7 +14,6 @@
     "backfill:dry": "DRY_RUN=true tsx scripts/backfillTopicSide.ts"
   },
   "dependencies": {
-    "@abdullahcheema122/iw-lipsync": "^1.0.0",
     "@livekit/agents-plugin-elevenlabs": "^1.0.18",
     "@livekit/components-react": "^2.9.14",
     "@phosphor-icons/react": "^2.1.8",
