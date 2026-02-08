@@ -1,0 +1,62 @@
+/**
+ * Azure ARKit (52) → CC4 morph target names
+ * LEFT = Azure ARKit key
+ * RIGHT = CC4 morph name (must exist in CC_Base_Body)
+ */
+// app/lib/azureArkit52.ts
+
+export const AZURE_ARKIT_52 = [
+  "eyeBlinkLeft",
+  "eyeLookDownLeft",
+  "eyeLookInLeft",
+  "eyeLookOutLeft",
+  "eyeLookUpLeft",
+  "eyeSquintLeft",
+  "eyeWideLeft",
+  "eyeBlinkRight",
+  "eyeLookDownRight",
+  "eyeLookInRight",
+  "eyeLookOutRight",
+  "eyeLookUpRight",
+  "eyeSquintRight",
+  "eyeWideRight",
+  "jawForward",
+  "jawLeft",
+  "jawRight",
+  "jawOpen",
+  "mouthClose", // ❌ ignored later
+  "mouthFunnel",
+  "mouthPucker",
+  "mouthLeft",
+  "mouthRight",
+  "mouthSmileLeft",
+  "mouthSmileRight",
+  "mouthFrownLeft",
+  "mouthFrownRight",
+  "mouthDimpleLeft",
+  "mouthDimpleRight",
+  "mouthStretchLeft",
+  "mouthStretchRight",
+  "mouthRollLower",
+  "mouthRollUpper",
+  "mouthShrugLower",
+  "mouthShrugUpper",
+  "mouthPressLeft",
+  "mouthPressRight",
+  "mouthLowerDownLeft",
+  "mouthLowerDownRight",
+  "mouthUpperUpLeft",
+  "mouthUpperUpRight",
+  "browDownLeft",
+  "browDownRight",
+  "browInnerUp",
+  "browOuterUpLeft",
+  "browOuterUpRight",
+  "cheekPuff",
+  "cheekSquintLeft",
+  "cheekSquintRight",
+  "noseSneerLeft",
+  "noseSneerRight",
+  "tongueOut",
+] as const;
+

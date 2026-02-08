@@ -1,0 +1,8 @@
+node_modules
+/.next
+/.next/cachepublic/models/*.glb
+public/models/
+public/models/*.glb
+
+# secrets
+.npmrc
