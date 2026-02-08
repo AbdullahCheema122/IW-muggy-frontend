@@ -6,3 +6,5 @@ public/models/*.glb
 
 # secrets
 .npmrc
+.env
+.env.*

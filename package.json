@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "preinstall": "node -e \"require('fs').writeFileSync('.npmrc', '@abdullahcheema122:registry=https://npm.pkg.github.com\\n//npm.pkg.github.com/:_authToken='+process.env.NPM_TOKEN+'\\n')\"",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
