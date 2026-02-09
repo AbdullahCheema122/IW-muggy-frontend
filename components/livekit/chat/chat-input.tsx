@@ -59,7 +59,7 @@ export function ChatInput({
         disabled={isDisabled}
         className="font-mono"
       >
-        SEND
+        SEND.
       </Button>
     </form>
   );
