@@ -1,5 +1,13 @@
 node_modules
 /.next
+# Large 3D assets (store on CDN instead)
+public/models/*.glb
+public/models/*.gltf
+public/models/*.bin
+public/models/*.fbx
+public/models/*.vrm
+public/models/*.usdz
+*.tar.gz
 
 # secrets
 .npmrc
