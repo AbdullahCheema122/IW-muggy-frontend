@@ -43,8 +43,8 @@ const commitMono = localFont({
 });
 
 export const metadata = {
-  title: "Debate Coach AI",
-  description: "Practice debates with Coach Dan + Judge Diane",
+  title: "Miss Muggy AI",
+  description: "Learn with miss muggy",
 };
 
 export default async function RootLayout({
